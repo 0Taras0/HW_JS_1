@@ -1,0 +1,21 @@
+﻿<main class="p-6 dark:bg-gray-900 dynamic-height">
+    <div class="max-w-xl mx-auto dark:bg-gray-800 p-6 rounded-lg shadow-md">
+
+        <h1 class="text-2xl font-bold mb-4 text-center text-white">
+            Take the test
+        </h1>
+
+        <label for="questionCount" id="questionsLabel" class="block text-lg font-medium text-white">Choose the number of questions:</label>
+        <input type="number" id="questionCount" min="1" max="20" value="10" class="w-full mt-2 p-2 border rounded-lg">
+
+        <button onclick="generateTest()" id="generateTestButton" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Start the test</button>
+
+        <form id="testForm" class="mt-6" onsubmit="checkAnswers(event)" onreset="resetTest(event)">
+            <div id="testContainer"></div>
+            <button type="submit" id="submitBtn" class="mt-4 w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-700 hidden">Check the answers</button>
+            <button type="reset" id="resetBtn" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 hidden">Try again</button>
+        </form>
+
+        <div id="result" class="mt-4 text-lg font-semibold text-center"></div>
+    </div>
+</main>
